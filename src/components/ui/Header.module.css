@@ -35,7 +35,7 @@
 .mobileContent {
   align-items: center;
   justify-content: space-between;
-  padding-right: 150px;
+  padding-right: 100px;
   display: none;
 }
 
@@ -71,12 +71,12 @@
 
 @media (max-width: 620px) {
   .mobileContent {
-    padding-right: 120px;
+    padding-right: 90px;
   }
 }
 
 @media (max-width: 520px) {
   .mobileContent {
-    padding-right: 50px;
+    padding-right: 20px;
   }
 }

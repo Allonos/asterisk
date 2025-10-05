@@ -20,10 +20,10 @@ const DrawerMenu = () => {
         onClick={showDrawer}
         style={{ backgroundColor: "#9B68FD", borderColor: "#9B68FDe5" }}
       >
-        <div className={HeaderStyles.burgerLines}>
-          <div className={HeaderStyles.burgerLine}></div>
-          <div className={HeaderStyles.burgerLine}></div>
-          <div className={HeaderStyles.burgerLine}></div>
+        <div className={"flex flex-col gap-1.5"}>
+          <div className={"w-[18px] h-[2px] bg-white"}></div>
+          <div className={"w-[18px] h-[2px] bg-white"}></div>
+          <div className={"w-[18px] h-[2px] bg-white"}></div>
         </div>
       </Button>
       <Drawer

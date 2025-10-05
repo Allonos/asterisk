@@ -47,17 +47,10 @@ function Home({ onLoadingComplete }) {
       {loading && <Loader />}
 
       {!canScroll && !loading && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            zIndex: 40,
-            pointerEvents: "all",
-          }}
-        />
+        <div className="fixed inset-0 z-40 pointer-events-auto" />
       )}
 
-      <div style={{ width: "100%", height: "100vh" }}>
+      <div className="w-[100%] h-[100vh]">
         <Canvas camera={{ position: [0, 0, 5] }}>
           <ScrollControls pages={5} damping={0.3} enabled={canScroll}>
             <Scene onAnimationComplete={handleAnimationComplete} />

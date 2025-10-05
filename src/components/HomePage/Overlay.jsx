@@ -4,12 +4,8 @@ import { Scroll, useScroll } from "@react-three/drei";
 import Section from "./Section";
 import Wrapper from "../layouts/wrapper";
 
-import OverlayStyles from "./styles/Overlay.module.css";
-import { useMediaQuery } from "react-responsive";
-
 export default function Overlay({ enabled }) {
   const scroll = useScroll();
-  const isSmall = useMediaQuery({ maxWidth: 560 });
 
   const [opacityFirstSection, setOpacityFirstSection] = useState(1);
   const [opacitySecondSection, setOpacitySecondSection] = useState(1);
@@ -21,7 +17,6 @@ export default function Overlay({ enabled }) {
     if (!enabled) return;
 
     setOpacityFirstSection(1 - scroll.range(0, 1 / 5));
-
     setOpacitySecondSection(scroll.curve(0.5 / 5, 1.5 / 5));
 
     const thirdStart = 2 / 5;
@@ -40,16 +35,13 @@ export default function Overlay({ enabled }) {
   return (
     <Scroll html>
       <Wrapper>
-        <div style={{ width: "100vw" }}>
-          <Section
-            opacity={opacityFirstSection}
-            isLastSection={false}
-            isSmall={isSmall}
-          >
-            <h1 className={OverlayStyles.cardTitle}>
+        <div className="w-screen">
+          {/* 1️⃣ First Section */}
+          <Section opacity={opacityFirstSection}>
+            <h1 className="font-bold text-[25px] max-[455px]:text-[18px] mb-4">
               Research Purposes and Public Access
             </h1>
-            <p className={OverlayStyles.pText}>
+            <p className="text-[15px] max-[455px]:text-[14px] text-gray-500">
               Open-source data on meteors—covering both upcoming trajectories
               and present coordinates—provides valuable resources for a wide
               range of specialists. Such transparency not only speeds up
@@ -59,19 +51,15 @@ export default function Overlay({ enabled }) {
               literacy, citizen science, and global awareness of planetary
               processes.
             </p>
-            <p className={OverlayStyles.arrow}>↓</p>
+            <p className="animate-bounce mt-6 text-2xl">↓</p>
           </Section>
 
-          <Section
-            right={!isSmall}
-            opacity={opacitySecondSection}
-            isLastSection={false}
-            isSmall={isSmall}
-          >
-            <h1 className={OverlayStyles.cardTitle}>
+          {/* 2️⃣ Second Section */}
+          <Section right opacity={opacitySecondSection}>
+            <h1 className="font-bold text-[25px] max-[455px]:text-[18px] mb-4">
               Avoiding Direct Dangers of Meteors Hitting Earth
             </h1>
-            <p className={OverlayStyles.pText}>
+            <p className="text-[15px] max-[455px]:text-[14px] text-gray-500">
               Comprehensive trajectory studies allow potential threats to be
               identified days or even weeks in advance, enabling preparation
               and, in extreme cases, evacuation. A dedicated database can
@@ -82,18 +70,15 @@ export default function Overlay({ enabled }) {
               delivering real-time updates and impact predictions that safeguard
               lives and infrastructure.
             </p>
-            <p className={OverlayStyles.arrow}>↓</p>
+            <p className="animate-bounce mt-6 text-2xl">↓</p>
           </Section>
 
-          <Section
-            opacity={opacityThirdSection}
-            isLastSection={false}
-            isSmall={isSmall}
-          >
-            <h1 className={OverlayStyles.cardTitle}>
+          {/* 3️⃣ Third Section */}
+          <Section opacity={opacityThirdSection}>
+            <h1 className="font-bold text-[25px] max-[455px]:text-[18px] mb-4">
               Protecting Satellites, Communication, and Navigation Systems
             </h1>
-            <p className={OverlayStyles.pText}>
+            <p className="text-[15px] max-[455px]:text-[14px] text-gray-500">
               Meteoroids pose a serious risk to satellites, which are critical
               for banking, navigation, emergency response, and global internet
               connectivity. A reliable forecasting system would allow operators
@@ -103,19 +88,15 @@ export default function Overlay({ enabled }) {
               allowing spacecraft to plan safe routes and shielding strategies
               based on predicted meteoroid activity.
             </p>
-            <p className={OverlayStyles.arrow}>↓</p>
+            <p className="animate-bounce mt-6 text-2xl">↓</p>
           </Section>
 
-          <Section
-            right={!isSmall}
-            opacity={opacityFourthSection}
-            isLastSection={false}
-            isSmall={isSmall}
-          >
-            <h1 className={OverlayStyles.cardTitle}>
+          {/* 4️⃣ Fourth Section */}
+          <Section right opacity={opacityFourthSection}>
+            <h1 className="font-bold text-[25px] max-[455px]:text-[18px] mb-4">
               Predicting Small Meteor Falls for Resource Potential
             </h1>
-            <p className={OverlayStyles.pText}>
+            <p className="text-[15px] max-[455px]:text-[14px] text-gray-500">
               often contain rare and technologically vital elements such as
               nickel, cobalt, and platinum-group metals. Tracking and predicting
               small meteor falls not only facilitates efficient recovery of
@@ -126,19 +107,15 @@ export default function Overlay({ enabled }) {
               contributes essential knowledge for the emerging field of asteroid
               mining and the sustainable use of extraterrestrial resources.
             </p>
-            <p className={OverlayStyles.arrow}>↓</p>
+            <p className="animate-bounce mt-6 text-2xl">↓</p>
           </Section>
 
-          <Section
-            right={!isSmall}
-            opacity={opacityFifthSection}
-            isLastSection={true}
-            isSmall={isSmall}
-          >
-            <h1 className={OverlayStyles.cardTitle}>
+          {/* 5️⃣ Fifth Section */}
+          <Section right opacity={opacityFifthSection} isLastSection>
+            <h1 className="font-bold text-[25px] max-[455px]:text-[18px] mb-4">
               Contributions to Earth’s Ecology and Climate
             </h1>
-            <p className={OverlayStyles.pText}>
+            <p className="text-[15px] max-[455px]:text-[14px] text-gray-500">
               The impact of meteorites extends far beyond immediate risks. Large
               collisions can inject dust and aerosols into the atmosphere,
               adjusting altering climate patterns for years by cooling global
