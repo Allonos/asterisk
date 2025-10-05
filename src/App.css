@@ -1,7 +1,5 @@
 @import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
-
 .ant-pagination .ant-pagination-item:hover {
   background-color: #8848ff !important;
   border-color: #8848ff !important;
