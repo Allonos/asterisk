@@ -3,8 +3,22 @@ import axios from "axios";
 import Plot from "react-plotly.js";
 import dayjs from "dayjs";
 import Loader from "../ui/Loader";
+import { useMediaQuery } from "react-responsive";
 
 const HeatmapPlot = ({ datePicked }) => {
+  const isMobile = useMediaQuery({ maxWidth: 640 });
+  const isLargeScreen = useMediaQuery({ minWidth: 1690 });
+
+  let plotWidth;
+
+  if (isMobile) {
+    plotWidth = 300;
+  } else if (isLargeScreen) {
+    plotWidth = 800;
+  } else {
+    plotWidth = 600;
+  }
+
   const fetchAsteroids = async ({ start_date, end_date }) => {
     const apiUrl = import.meta.env.VITE_API_URL;
     const apiKey = import.meta.env.VITE_API_KEY;
@@ -171,25 +185,34 @@ const HeatmapPlot = ({ datePicked }) => {
         layout={{
           title: {
             text: heatMapTitle,
-            font: { color: "white" },
+            font: {
+              color: "white",
+              size: isMobile ? 10 : isLargeScreen ? 14 : 16,
+            },
           },
-          xaxis: {
-            tickangle: -45,
-            side: "bottom",
-            tickfont: { color: "white" },
-            titlefont: { color: "white" },
-            gridcolor: "#444",
-          },
-          yaxis: {
-            autorange: "reversed",
-            tickfont: { color: "white" },
-            titlefont: { color: "white" },
-            gridcolor: "#444",
-          },
+          xaxis: isMobile
+            ? { visible: false }
+            : {
+                tickangle: -45,
+                side: "bottom",
+                tickfont: { color: "white" },
+                titlefont: { color: "white" },
+                gridcolor: "#444",
+              },
+          yaxis: isMobile
+            ? { visible: false }
+            : {
+                autorange: "reversed",
+                tickfont: { color: "white" },
+                titlefont: { color: "white" },
+                gridcolor: "#444",
+              },
           annotations: annotations,
-          width: 800,
-          height: 700,
-          margin: { l: 200, r: 50, t: 100, b: 150 },
+          width: plotWidth,
+          height: isMobile ? 400 : 700,
+          margin: isMobile
+            ? { l: 30, r: 30, t: 60, b: 30 }
+            : { l: 200, r: 50, t: 100, b: 150 },
           paper_bgcolor: "black",
           plot_bgcolor: "black",
         }}

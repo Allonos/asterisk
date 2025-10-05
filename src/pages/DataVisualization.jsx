@@ -24,7 +24,7 @@ const DataVisualization = () => {
   const [enableZooming, setEnableZooming] = useState(false);
 
   return (
-    <div className="w-[10] h-screen bg-black relative">
+    <div className="h-screen relative bg-black">
       <div className="absolute top-5  border-white left-5 text-white text-lg font-sans z-10 bg-black/60 px-4 py-3 rounded-lg max-w-[600px]">
         <h1 className="text-2xl">Visualization of Near Earth Asteroids from</h1>
         <p className="text-xl">2025-09-08 to 2025-10-01</p>
