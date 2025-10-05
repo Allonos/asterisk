@@ -4,11 +4,11 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import Home from "./pages/Home.jsx";
 import Header from "./components/ui/Header.jsx";
-import DataAnalysis from "./pages/DataAnalysis.jsx";
 import Explore from "./pages/Explore.jsx";
 
 import "./App.css";
 import { Toaster } from "react-hot-toast";
+import DataVisualization from "./pages/DataVisualization.jsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -52,7 +52,7 @@ function App() {
           path="/"
           element={<Home onLoadingComplete={handleLoadingComplete} />}
         />
-        <Route path="/data-analysis" element={<DataAnalysis />} />
+        <Route path="/data-visualization" element={<DataVisualization />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/about" element={<p>here about page</p>} />
       </Routes>

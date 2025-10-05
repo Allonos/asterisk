@@ -51,7 +51,7 @@ const DrawerMenu = () => {
           Home
         </NavLink>
         <NavLink
-          to="/data-analytics"
+          to="/data-visulization"
           onClick={onClose}
           className={HeaderStyles.burgerLinks}
           style={({ isActive }) => ({
@@ -59,7 +59,7 @@ const DrawerMenu = () => {
             color: isActive ? "#9B68FD" : "#ffffff",
           })}
         >
-          Data Analytics
+          Data Visualization
         </NavLink>
         <NavLink
           to="/explore"
