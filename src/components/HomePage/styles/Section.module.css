@@ -1,0 +1,35 @@
+.sectionContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem;
+}
+
+.cardContentParent {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardContent {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 10px 2rem;
+}
+
+@media (min-width: 900px) {
+  .cardContentParent {
+    max-width: 24rem;
+  }
+}
+
+@media (max-width: 455px) {
+  .sectionContainer {
+    padding: 0;
+  }
+}

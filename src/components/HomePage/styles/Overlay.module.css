@@ -1,0 +1,41 @@
+.cardTitle {
+  font-weight: 700;
+  font-size: 25px;
+  margin-bottom: 1rem;
+}
+
+.pText {
+  font-size: 15px;
+  color: #6b7280;
+}
+
+.arrow {
+  animation: bounce 1s infinite;
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 455px) {
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .pText {
+    font-size: 14px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25%);
+  }
+}
