@@ -52,7 +52,10 @@ function App() {
           path="/"
           element={<Home onLoadingComplete={handleLoadingComplete} />}
         />
-        <Route path="/data-visualization" element={<DataVisualization />} />
+        <Route
+          path="/data-analysis-visualization"
+          element={<DataVisualization />}
+        />
         <Route path="/explore" element={<Explore />} />
         <Route path="/about" element={<p>here about page</p>} />
       </Routes>
