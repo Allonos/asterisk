@@ -56,8 +56,11 @@ function Header({ startAnimation = false }) {
               Home
             </NavLink>
             <div className="w-px h-5 bg-gray-400" />
-            <NavLink to="/data-visualization" className={navLinkClasses}>
-              Data Visualization
+            <NavLink
+              to="/data-analysis-visualization"
+              className={navLinkClasses}
+            >
+              Data Analysis & Visualization
             </NavLink>
             <div className="w-px h-5 bg-gray-400" />
             <NavLink to="/explore" className={navLinkClasses}>
@@ -65,7 +68,7 @@ function Header({ startAnimation = false }) {
             </NavLink>
             <div className="w-px h-5 bg-gray-400" />
             <NavLink to="/about" className={navLinkClasses}>
-              About
+              About Us
             </NavLink>
           </nav>
         </div>

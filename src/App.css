@@ -1,1 +1,35 @@
 @import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.ant-pagination .ant-pagination-item:hover {
+  background-color: #8848ff !important;
+  border-color: #8848ff !important;
+}
+.ant-pagination .ant-pagination-item:hover a {
+  color: white !important;
+}
+.ant-pagination .ant-pagination-item-active {
+  background-color: #8848ff !important;
+  border-color: #8848ff !important;
+}
+.ant-pagination .ant-pagination-item-active a {
+  color: white !important;
+}
+.ant-pagination .ant-pagination-prev .ant-pagination-item-link,
+.ant-pagination .ant-pagination-next .ant-pagination-item-link {
+  background-color: #ffffff !important;
+  border-color: #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.88) !important;
+}
+.ant-pagination .ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination .ant-pagination-next:hover .ant-pagination-item-link {
+  background-color: #8848ff !important;
+  border-color: #8848ff !important;
+  color: white !important;
+}
+.ant-pagination .ant-pagination-disabled .ant-pagination-item-link {
+  background-color: #ffffff !important;
+  border-color: #d9d9d9 !important;
+  color: rgba(0, 0, 0, 0.25) !important;
+}
