@@ -73,7 +73,7 @@ const DrawerMenu = () => {
           Explore
         </NavLink>
         <NavLink
-          to="/about-us"
+          to="/about"
           onClick={onClose}
           className={HeaderStyles.burgerLinks}
           style={({ isActive }) => ({
@@ -81,7 +81,7 @@ const DrawerMenu = () => {
             color: isActive ? "#9B68FD" : "#ffffff",
           })}
         >
-          About
+          About Us
         </NavLink>
       </Drawer>
     </>

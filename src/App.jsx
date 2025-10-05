@@ -9,6 +9,7 @@ import Explore from "./pages/Explore.jsx";
 import "./App.css";
 import { Toaster } from "react-hot-toast";
 import DataVisualization from "./pages/DataVisualization.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -57,7 +58,7 @@ function App() {
           element={<DataVisualization />}
         />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/about" element={<p>here about page</p>} />
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
     </QueryClientProvider>
   );

@@ -68,7 +68,7 @@ function Header({ startAnimation = false }) {
             </NavLink>
             <div className="w-px h-5 bg-gray-400" />
             <NavLink to="/about" className={navLinkClasses}>
-              About
+              About Us
             </NavLink>
           </nav>
         </div>
