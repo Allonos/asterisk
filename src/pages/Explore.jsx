@@ -11,12 +11,14 @@ const Explore = () => {
   });
 
   const fetchAsteroids = async ({ start_date, end_date }) => {
-    const url = "https://api.nasa.gov/neo/rest/v1/feed";
-    const response = await axios.get(url, {
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const apiKey = import.meta.env.VITE_API_KEY;
+
+    const response = await axios.get(apiUrl, {
       params: {
         start_date,
         end_date,
-        api_key: "6NXaopMA1vdtUfwzUPXA1JVvWChSnWvI57oBkanI",
+        api_key: apiKey,
       },
     });
 
