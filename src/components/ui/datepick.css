@@ -1,0 +1,19 @@
+@media (max-width: 900px) {
+  /* Make the RangePicker's dropdown calendars stack vertically */
+  .vertical-range-picker .ant-picker-panels {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  /* Optional: give a bit of space between the two calendar panels */
+  .vertical-range-picker .ant-picker-panel-container {
+    gap: 8px !important;
+  }
+
+  /* Optional: make sure it fits better on small screens */
+  .vertical-range-picker .ant-picker-dropdown {
+    width: 100vw !important;
+    left: 0 !important;
+  }
+}

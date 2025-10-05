@@ -5,13 +5,11 @@ import Section from "./Section";
 import Wrapper from "../layouts/wrapper";
 
 import OverlayStyles from "./styles/Overlay.module.css";
-import { useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 
 export default function Overlay({ enabled }) {
   const scroll = useScroll();
   const isSmall = useMediaQuery({ maxWidth: 560 });
-  const navigate = useNavigate();
 
   const [opacityFirstSection, setOpacityFirstSection] = useState(1);
   const [opacitySecondSection, setOpacitySecondSection] = useState(1);
@@ -48,10 +46,18 @@ export default function Overlay({ enabled }) {
             isLastSection={false}
             isSmall={isSmall}
           >
-            <h1 className={OverlayStyles.cardTitle}>Welcome to ASTERISK</h1>
+            <h1 className={OverlayStyles.cardTitle}>
+              Research Purposes and Public Access
+            </h1>
             <p className={OverlayStyles.pText}>
-              Explore the cosmos with our interactive asteroid visualization.
-              Scroll down to discover more about space exploration.
+              Open-source data on meteors—covering both upcoming trajectories
+              and present coordinates—provides valuable resources for a wide
+              range of specialists. Such transparency not only speeds up
+              research in various fields of science but also promotes public
+              engagement. By making this data freely available, people of all
+              ages and backgrounds are encouraged to participate in scientific
+              literacy, citizen science, and global awareness of planetary
+              processes.
             </p>
             <p className={OverlayStyles.arrow}>↓</p>
           </Section>
@@ -62,12 +68,19 @@ export default function Overlay({ enabled }) {
             isLastSection={false}
             isSmall={isSmall}
           >
-            <h1 className={OverlayStyles.cardTitle}>Section Two</h1>
+            <h1 className={OverlayStyles.cardTitle}>
+              Avoiding Direct Dangers of Meteors Hitting Earth
+            </h1>
             <p className={OverlayStyles.pText}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              Comprehensive trajectory studies allow potential threats to be
+              identified days or even weeks in advance, enabling preparation
+              and, in extreme cases, evacuation. A dedicated database can
+              classify objects by their risk level and generate impact maps,
+              helping authorities plan responses to possible danger. For larger
+              objects, which can trigger seismic activity or tsunamis, such
+              systems could operate similarly to modern weather forecasts,
+              delivering real-time updates and impact predictions that safeguard
+              lives and infrastructure.
             </p>
             <p className={OverlayStyles.arrow}>↓</p>
           </Section>
@@ -77,12 +90,18 @@ export default function Overlay({ enabled }) {
             isLastSection={false}
             isSmall={isSmall}
           >
-            <h1 className={OverlayStyles.cardTitle}>Section Three</h1>
+            <h1 className={OverlayStyles.cardTitle}>
+              Protecting Satellites, Communication, and Navigation Systems
+            </h1>
             <p className={OverlayStyles.pText}>
-              It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages.
+              Meteoroids pose a serious risk to satellites, which are critical
+              for banking, navigation, emergency response, and global internet
+              connectivity. A reliable forecasting system would allow operators
+              to adjust satellite orbits in advance, reducing the likelihood of
+              catastrophic damage. Beyond protecting current infrastructure,
+              these insights also strengthen support for space missions,
+              allowing spacecraft to plan safe routes and shielding strategies
+              based on predicted meteoroid activity.
             </p>
             <p className={OverlayStyles.arrow}>↓</p>
           </Section>
@@ -93,11 +112,19 @@ export default function Overlay({ enabled }) {
             isLastSection={false}
             isSmall={isSmall}
           >
-            <h1 className={OverlayStyles.cardTitle}>Section Four</h1>
+            <h1 className={OverlayStyles.cardTitle}>
+              Predicting Small Meteor Falls for Resource Potential
+            </h1>
             <p className={OverlayStyles.pText}>
-              More recently with desktop publishing software like Aldus
-              PageMaker including versions of Lorem Ipsum. The asteroid
-              continues its journey through space as you scroll.
+              often contain rare and technologically vital elements such as
+              nickel, cobalt, and platinum-group metals. Tracking and predicting
+              small meteor falls not only facilitates efficient recovery of
+              fresh material but also opens pathways for economic benefit and
+              innovation in resource application. Moreover, freshly fallen
+              meteorites are crucial for scientific study, offering unaltered
+              samples from the early solar system. Cataloging such events
+              contributes essential knowledge for the emerging field of asteroid
+              mining and the sustainable use of extraterrestrial resources.
             </p>
             <p className={OverlayStyles.arrow}>↓</p>
           </Section>
@@ -108,14 +135,20 @@ export default function Overlay({ enabled }) {
             isLastSection={true}
             isSmall={isSmall}
           >
-            <h1 className={OverlayStyles.cardTitle}>Final Section</h1>
+            <h1 className={OverlayStyles.cardTitle}>
+              Contributions to Earth’s Ecology and Climate
+            </h1>
             <p className={OverlayStyles.pText}>
-              Thank you for exploring! The asteroid continues its journey
-              through space, just like your journey through this content. Watch
-              as it moves across the screen based on your scroll position.
-              <span onClick={() => navigate("/about")}>
-                Want more? click this text
-              </span>
+              The impact of meteorites extends far beyond immediate risks. Large
+              collisions can inject dust and aerosols into the atmosphere,
+              adjusting altering climate patterns for years by cooling global
+              temperatures and blocking sunlight. Even smaller, routine
+              meteoroid infall contributes cosmic dust that can influence cloud
+              formation, atmospheric chemistry, and long-term ecological
+              processes. Studying these contributions increases our
+              understanding of Earth’s climate flexibility and provides key
+              insights into how habitable environments might develop on other
+              planets.
             </p>
           </Section>
         </div>
