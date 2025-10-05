@@ -44,7 +44,9 @@ const Explore = () => {
   const totalItems = asteroids.length;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const currentAsteroids = asteroids.slice(startIndex, endIndex);
+  const currentAsteroids = Array.isArray(asteroids)
+    ? asteroids.slice(startIndex, endIndex)
+    : [];
 
   // Handle page change
   const handlePageChange = (page) => {
