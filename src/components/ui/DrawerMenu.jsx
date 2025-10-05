@@ -51,7 +51,7 @@ const DrawerMenu = () => {
           Home
         </NavLink>
         <NavLink
-          to="/data-analysis-visulization"
+          to="/data-analysis-visualization"
           onClick={onClose}
           className={HeaderStyles.burgerLinks}
           style={({ isActive }) => ({
