@@ -1,4 +1,3 @@
-import React from "react";
 import { Pagination, ConfigProvider } from "antd";
 
 const CustomPagination = ({ current, total, pageSize, onChange }) => {

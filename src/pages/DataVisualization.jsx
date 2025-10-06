@@ -1,7 +1,6 @@
-import React, { Suspense, useState, useRef } from "react";
+import { Suspense, useState, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useGLTF, PerspectiveCamera } from "@react-three/drei";
-import HeatmapPlot from "../components/DataVisualizationPage/HeatMapPlot";
 import HeatMapContainer from "../components/DataVisualizationPage/HeatMapContainer";
 
 function Model() {
