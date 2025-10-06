@@ -5,7 +5,9 @@ import HeatmapPlot from "../components/DataVisualizationPage/HeatMapPlot";
 import HeatMapContainer from "../components/DataVisualizationPage/HeatMapContainer";
 
 function Model() {
-  const { scene } = useGLTF("/src/assets/solar_system_asteroids.glb");
+  const { scene } = useGLTF(
+    `${import.meta.env.BASE_URL}assets/solar_system_asteroids.glb`
+  );
   const modelRef = useRef();
 
   // Rotate the model continuously

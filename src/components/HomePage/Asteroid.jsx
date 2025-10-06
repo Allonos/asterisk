@@ -7,8 +7,8 @@ import { useMediaQuery } from "react-responsive";
 
 export default function Asteroid({ scrollProgress, onAnimationComplete }) {
   const groupRef = useRef();
-  const { scene } = useGLTF("/src/assets/fbx.glb");
-  const diffuse = useTexture("/src/assets/diffuse.jpg");
+  const { scene } = useGLTF(`${import.meta.env.BASE_URL}assets/fbx.glb`);
+  const diffuse = useTexture(`${import.meta.env.BASE_URL}assets/diffuse.jpg`);
   const [animationDone, setAnimationDone] = useState(false);
 
   const isMobile = useMediaQuery({ maxWidth: 820 });
@@ -103,4 +103,4 @@ export default function Asteroid({ scrollProgress, onAnimationComplete }) {
   );
 }
 
-useGLTF.preload("/src/assets/fbx.glb");
+useGLTF.preload("/public/assets/fbx.glb");
