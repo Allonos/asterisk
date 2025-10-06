@@ -1,8 +1,14 @@
-import mariami from "../../assets/images/mariami.jpg";
-import luka from "../../assets/images/luka1.jpg";
-import rezy from "../../assets/images/rezy.jpg";
-import salo from "../../assets/images/salo.jpg";
-import sesili from "../../assets/images/sesili.jpg";
+// import mariami from "../../assets/images/mariami.jpg";
+// import luka from "../../assets/images/luka1.jpg";
+// import rezy from "../../assets/images/rezy.jpg";
+// import salo from "../../assets/images/salo.jpg";
+// import sesili from "../../assets/images/sesili.jpg";
+
+import mariami from "../../../public/assets/images/mariami.jpg";
+import luka from "../../../public/assets/images/luka1.jpg";
+import rezy from "../../../public/assets/images/rezy.jpg";
+import salo from "../../../public/assets/images/salo.jpg";
+import sesili from "../../../public/assets/images/sesili.jpg";
 
 import data from "../../data/data";
 
