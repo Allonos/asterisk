@@ -103,4 +103,4 @@ export default function Asteroid({ scrollProgress, onAnimationComplete }) {
   );
 }
 
-useGLTF.preload("/public/assets/fbx.glb");
+useGLTF.preload(`${import.meta.env.BASE_URL}assets/fbx.glb`);
